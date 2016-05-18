@@ -1,0 +1,21 @@
+@namespace("com.sudip.avro")
+protocol Avro5 {
+
+    record ApplicationInstance {
+    	string id;
+    	long eventTime;
+    }
+
+    record ModuleInstance {
+    	string id;
+        long eventTime;
+        ApplicationInstance parentApp;
+    }
+
+    record ScreenInstance {
+        string id;
+        long eventTime;
+        ModuleInstance parentModule;
+    }
+
+}
